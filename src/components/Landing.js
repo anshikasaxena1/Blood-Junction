@@ -1,8 +1,18 @@
 import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import Main from './MainContent'
+
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className="min-h-screen flex flex-col">
+    <Header />
+    <main className="flex-grow">
+      <Main/>
+    </main>
+    <Footer />
+  </div>
   )
 }
 

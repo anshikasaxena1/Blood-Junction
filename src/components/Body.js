@@ -3,6 +3,7 @@ import React from 'react'
 import Landing from './Landing'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Login from './Login'
+
 import Signup from './Signup'
 import Home from './Home'
 
@@ -18,18 +19,19 @@ const Body = () => {
             element: <Login/>
         },
         {
-            path:"signup",
+            path:"/signup",
             element: <Signup/>
         },
         {
-            path:"home",
+            path:"/home",
             element:<Home/>
-        }
+        },
+        
     ])
 
 
   return (
-    <div>
+    <div className='bg-customWhite'>
         <RouterProvider router={appRouter}/>
     </div>
   )
