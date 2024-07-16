@@ -1,11 +1,14 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import drop from "../assets/drop.png"
 import cardio_load from "../assets/cardio_load.png"
-import volunteer_activism from "../assets/volunteer_activism.png"
-import { Link } from 'react-router-dom'
+
+import Benefits from './Benefits'
+import Donorslide from './Donorslide'
+
 
 const Main = () => {
+  
   return (
     <div className='flex-grow p-4'>
       <div className='w-full   mx-auto my-0'>
@@ -33,24 +36,24 @@ const Main = () => {
         <img src={drop} alt="Icon" className=" h-auto w-auto m-0 inline   absolute right-2 p-0" />
         </div>
         <div className='mt-14 '>
-        <span className='  w-3/4 text-customMaroon mx-44 text-8xl p-8 px-10 font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Eligibility Of Blood Donation</span>
+        <span className='  w-3/4 text-customMaroon mx-24 text-8xl p-8 px-5 font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Eligibility Of Blood Donation</span>
         </div>
-        <div className='container  flex mx-auto mt-16 justify-center items-center'>
-          <div>
+        <div className='container  flex mx-auto  justify-center items-center'>
+          <div className='mt-18'>
           <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
           </button>
-          <span className='font-semibold text-shadow-sm text-3xl text-center text-customTextColor '><span className='mx-4'>Age between</span><br/> 18 and 60 years</span>
+          <span className='font-semibold  text-shadow-sm text-3xl text-center text-customTextColor '><span className='mx-4'>Age between</span><br/> 18 and 60 years</span>
           </div>
-          <div>
+          <div className='mt-16'>
           <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
           </button>
           <span className='font-semibold text-shadow-sm text-3xl tracking-normal text-center text-customTextColor '><span>Haemoglobin</span><br /><span className='mx-2 leading-none'>not less than</span> <br/> <span className='mx-7'>12.5 g/Dl</span></span>
           </div>
-          <div>
+          <div className='mt-16'>
           <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
@@ -60,7 +63,7 @@ const Main = () => {
             <snap className='mx-9'>minute</snap>
           </span>
           </div>
-          <div>
+          <div className='mt-16'>
           <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
@@ -72,10 +75,15 @@ const Main = () => {
         <button className='border-2 border-none  px-20 py-3 rounded-xl shadow-md  bg-customBtn text-white font-semibold tracking-wide text-3xl' >See all info</button>
         </div>
       </div>
-      <div className='mt-36 mx-56'>
-        <span className='  w-3/4 text-customMaroon  text-8xl p-8 px-10 font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Benefits of Blood Donation</span>
-        <div>
-          <img src={volunteer_activism} alt='volunteeractivism' className='border-4 p-8 bg-white rounded-3xl '/>
+      <div className='mt-36 '>
+        <span className='w-3/4 text-customMaroon mx-24 text-8xl p-8 px-5 font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Benefits of Blood Donation</span>
+        <div className='w-3/4 place-content-center mx-auto'>
+          <Benefits/>
+          <div className='mt-20'>
+          <span className='  text-customMaroon flex justify-center items-center text-7xl p-8 px-5 font-bold   leading-snug tracking-tight text-shadow-sm'>Top Donors</span>
+          <Donorslide/>
+          
+          </div>
         </div>
         </div>
     </div>

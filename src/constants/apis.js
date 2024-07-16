@@ -1,0 +1,1 @@
+export const SLIDE_API="https://randomuser.me/api/";

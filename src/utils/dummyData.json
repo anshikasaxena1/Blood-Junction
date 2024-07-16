@@ -1,0 +1,115 @@
+[
+    {
+      "email": "سارینا.کوتی@example.com",
+      "gender": "female",
+      "phone_number": "0997-267-1133",
+      "birthdate": 1077518239,
+      "location": {
+        "street": "5273 سمیه",
+        "city": "بیرجند",
+        "state": "تهران",
+        "postcode": 99854
+      },
+      "username": "yellowpeacock139",
+      "password": "chopper",
+      "units":5,
+      "first_name": "Kitty",
+      "last_name" : "Beck",
+      "title": "mrs",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfAx9PGDAtNNZMJKn6Fy1LcC_AXwRGxRvQg86aupS2ixNRXVgUpHxeaPELYpuMW-iEIKg&usqp=CAU"
+    },
+    {
+      "email": "melissa.fleming@example.com",
+      "gender": "female",
+      "phone_number": "0740-304-475",
+      "birthdate": 469521368,
+      "location": {
+        "street": "3655 manchester road",
+        "city": "winchester",
+        "state": "berkshire",
+        "postcode": "YB2 8EJ"
+      },
+      "username": "goldenkoala410",
+      "password": "sick",
+      "units":8,
+      "first_name": "Melissa",
+      "last_name": "Fleming",
+      "title": "miss",
+      "picture": "https://pbs.twimg.com/profile_images/490463804568764416/luJrpIbA_400x400.jpeg"
+    },
+    {
+      "email": "christoffer.christiansen@example.com",
+      "gender": "male",
+      "phone_number": "05761325",
+      "birthdate": 244475798,
+      "location": {
+        "street": "3391 pilevangen",
+        "city": "overby lyng",
+        "state": "danmark",
+        "postcode": 88520
+      },
+      "username": "smallbird985",
+      "password": "samuel",
+      "first_name": "Christoffer",
+      "last_name": "Christiansen",
+      "units":4,
+      "title": "mr",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM2K7kaMX3VuvKq_8k2Z4xvPOOsJgZxzDabSFP6tD9EnNmC3gk4-MuTs8q1w&s"
+    },
+    {
+      "email": "valtteri.pulkkinen@example.com",
+      "gender": "male",
+      "phone_number": "041-829-79-61",
+      "birthdate": 9608479,
+      "location": {
+        "street": "6489 hermiankatu",
+        "city": "parikkala",
+        "state": "northern savonia",
+        "postcode": 77761
+      },
+      "username": "brownfish540",
+      "password": "peepee",
+      "first_name": "Valtteri",
+      "last_name": "Pulkkinen",
+      "units":7,
+      "title": "mr",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTQ1d65VtbIKTPMktqCtCfeKsTwD3LGYqO6Q&usqp=CAU"
+    },
+    {
+      "email": "todd.beck@example.com",
+      "gender": "male",
+      "phone_number": "0768-374-878",
+      "birthdate": 216450355,
+      "location": {
+        "street": "7846 chester road",
+        "city": "wakefield",
+        "state": "shropshire",
+        "postcode": "U43 3QT"
+      },
+      "username": "bigelephant503",
+      "password": "rrrrr",
+      "first_name": "Todd",
+      "last_name": "Beck",
+      "units":6,
+      "title": "mr",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxRuLTMLEy_JKU7lwfG6kdwpjAezxhM3pZiQ&usqp=CAU"
+    },
+    {
+      "email": "kayla.hall@example.com",
+      "gender": "female",
+      "phone_number": "(932)-142-5202",
+      "birthdate": 450297969,
+      "location": {
+        "street": "1935 aldwins road",
+        "city": "whangarei",
+        "state": "gisborne",
+        "postcode": 22546
+      },
+      "first_name": "Mita",
+      "last_name": "Tucker",
+      "units":8,
+      "picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT33t0mkbNo3Zis5lZ98DJTXcnfGbBb6AqunA&usqp=CAU"
+      
+    }
+
+    ]

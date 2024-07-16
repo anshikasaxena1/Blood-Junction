@@ -1,0 +1,30 @@
+/* scrollbar.css */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-thumb-custom::-webkit-scrollbar-thumb {
+    background-color: #1f2937; /* Dark gray */
+    border-radius: 9999px; /* Rounded corners */
+  }
+  
+  .scrollbar-track-custom::-webkit-scrollbar-track {
+    background-color: #e5e7eb; /* Light gray */
+    border-radius: 9999px; /* Rounded corners */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* For Firefox */
+  .scrollbar-hide {
+    scrollbar-width: none; /* hide scrollbar */
+  }
+  
+  .scrollbar-custom {
+    scrollbar-width: thin; /* small scrollbar */
+    scrollbar-color: #1f2937 #e5e7eb; /* thumb color track color */
+  }
+  
