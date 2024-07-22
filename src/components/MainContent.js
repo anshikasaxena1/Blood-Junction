@@ -13,8 +13,8 @@ const Main = () => {
     <div className='flex-grow p-4'>
       <div className='w-full   mx-auto my-0'>
       <div className='container  flex mx-auto mt-28'>
-        <div className='w-3/4'>
-        <span className='  w-3/4 text-customMaroon  text-7xl font-bold m-1 leading-snug tracking-normal text-shadow-sm'>Maintain a Healthy lifestyle, Donate Blood!</span>
+        <div className='w-3/4 p-6'>
+        <span className='  w-3/4  text-customMaroon  text-7xl font-bold m-1 leading-snug tracking-normal text-shadow-sm'>Maintain a Healthy lifestyle, Donate Blood!</span>
         <span className='flex text-customTextColor font-semibold  font-18px text-2xl tracking-normal'>Did you know that people who donate blood are 88% less likely to suffer a heart attack and 33% <br/>less likely to acquire any type of cardiovascular disease. # When you donate blood, it removes 225 <br/>to 250 milligrams of iron from your body, hence reducing the
            risk of heart disease.
         </span>
@@ -33,28 +33,28 @@ const Main = () => {
         </button>
         </div>
         </div>
-        <img src={drop} alt="Icon" className=" h-auto w-auto m-0 inline   absolute right-2 p-0" />
+        <img src={drop} alt="Icon" className=" h-auto w-auto m-0 inline   absolute right-0 p-0" />
         </div>
         <div className='mt-14 '>
         <span className='  w-3/4 text-customMaroon mx-24 text-8xl p-8 px-5 font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Eligibility Of Blood Donation</span>
         </div>
-        <div className='container  flex mx-auto  justify-center items-center'>
-          <div className='mt-18'>
-          <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
+        <div className='container  flex  justify-center items-center p-12 '>
+          <div className='mt-18 ml-20 '>
+          <button className='flex justify-center items-center rounded-full mr-32 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
           </button>
           <span className='font-semibold  text-shadow-sm text-3xl text-center text-customTextColor '><span className='mx-4'>Age between</span><br/> 18 and 60 years</span>
           </div>
           <div className='mt-16'>
-          <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
+          <button className='flex justify-center items-center rounded-full mr-32 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
           </button>
           <span className='font-semibold text-shadow-sm text-3xl tracking-normal text-center text-customTextColor '><span>Haemoglobin</span><br /><span className='mx-2 leading-none'>not less than</span> <br/> <span className='mx-7'>12.5 g/Dl</span></span>
           </div>
           <div className='mt-16'>
-          <button className='flex justify-center items-center rounded-full mr-36 h-56 w-56 bg-white shadow-lg '>
+          <button className='flex justify-center items-center rounded-full mr-32 h-56 w-56 bg-white shadow-lg '>
             <img src={cardio_load} alt="heartimage" className='h-100px w-100px '/>
             
           </button>

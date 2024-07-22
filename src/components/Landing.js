@@ -6,7 +6,7 @@ import Main from './MainContent'
 
 const Landing = () => {
   return (
-    <div className="w-screen min-h-screen flex flex-col">
+    <div className="w-auto min-h-screen flex flex-col">
     <Header />
     <main className="flex-grow">
       <Main/>

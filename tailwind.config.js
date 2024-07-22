@@ -3,11 +3,17 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      
+      borderWidth: {
+
+      },
       width: {
         '200px': '200px',
+
       },
       height: {
         '200px': '200px',
+        '801px': '801px',
       },
       borderRadius: {
         'extra-large': '3rem',
@@ -24,6 +30,8 @@ module.exports = {
         'sans': ['Montserrat', 'sans-serif'],
       },
       colors: {
+        contactText: "#4F000B",
+        footerPink: "#FFAEBD",
         customMaroon: '#780000',
         customBtn: "#4F000B",
         customShodowM: '#920000',
