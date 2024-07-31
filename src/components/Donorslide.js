@@ -6,7 +6,7 @@ const Donorslide = () => {
   return (
     <div>
     <div className='justify-center items-center w-full h-full overflow-x-auto flex flex-nowrap mt-16'>
-      <ul className='flex  overflow-x-scroll scrollbar-hide scrollbar-custom scrollbar-thumb-custom scrollbar-track-custom whitespace-nowrap flex-nowrap'>
+      <ul className='flex  overflow-x-scroll scrollbar-hide scrollbar-thumb-custom scrollbar-track-custom whitespace-nowrap flex-nowrap'>
         {dummyData.map(user => (
           <li key={user.id} className='mx-4'>
             <div className='h-60 w-56 flex-none  border-customWhite text-white m-2'>
