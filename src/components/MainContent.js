@@ -10,7 +10,7 @@ import Donorslide from './Donorslide'
 const Main = () => {
   
   return (
-    <div className='flex-grow p-4'>
+    <div className='flex-grow  bg-customWhite p-4 min-h-screen'>
       <div className='w-full   mx-auto my-0'>
       <div className='container  flex mx-auto mt-28'>
         <div className='w-3/4 p-6'>

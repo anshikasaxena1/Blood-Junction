@@ -2,10 +2,18 @@
 import React from 'react'
 import Landing from './Landing'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Login from './Login'
 
+import Login from './Login'
 import Signup from './Signup'
-import Home from './Home'
+import UserProfile from './UserProfile'
+import Donate from './Donate'
+import HospitalLogin from './HospitalLogin'
+import DonationCampLogin from './DonationCampLogin'
+import EnterOTP from './EnterOTP'
+import OrganiseCamp from './OrganiseCamp'
+import Thanks from './Thanks'
+import BloodCamps from './BloodCamps'
+import CampPage from './CampPage'
 
 const Body = () => {
 
@@ -13,6 +21,34 @@ const Body = () => {
         {
             path:"/",
             element: <Landing/>
+        },
+        {
+            path: "/campdetails",
+            element: <CampPage />,
+        },
+        {
+            path:"/organisecamp",
+            element: <OrganiseCamp/>
+        },
+        {
+            path:"/bloodcamps",
+            element: <BloodCamps/>
+        },
+        {
+            path:"/enterOTP",
+            element: <EnterOTP/>
+        },
+        {
+            path:"/donate",
+            element: <Donate/>
+        },
+        {
+            path:"/HospitalLogin",
+            element: <HospitalLogin/>
+        },
+        {
+            path:"/DonationCampLogin",
+            element: <DonationCampLogin/>
         },
         {
             path:"/login",
@@ -24,14 +60,22 @@ const Body = () => {
         },
         {
             path:"/home",
-            element:<Home/>
+            element:<Landing/>
+        },
+        {
+            path:"/userProfile",
+            element:<UserProfile/>
+        },
+        {
+            path:"/thanks",
+            element:<Thanks/>
         },
         
     ])
 
 
   return (
-    <div className='bg-customWhite'>
+    <div >
         <RouterProvider router={appRouter}/>
     </div>
   )

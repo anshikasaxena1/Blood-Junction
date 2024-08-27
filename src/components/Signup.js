@@ -1,132 +1,160 @@
-import React, { useState } from "react";
-import subtract from "../assets/Subtract.png";
-import frame from "../assets/unsplash_TbRNeMjXCrU.png";
-import arrow from "../assets/arrow_downward_alt.png";
-import arrowDown from "../assets/arrow_forward_ios.png";
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
+import { submitSignup } from '../actions/signUpActions';
 import 'react-phone-input-2/lib/style.css';
+import 'tailwindcss/tailwind.css';
+import ProfilePictureUpload from '../inputs/profilePictureInput';
+import DateOfBirthInput from '../inputs/dateOfBirthInput';
+import GenderInput from '../inputs/genderInput';
+import BloodGroupInput from '../inputs/bloodGroupInputs';
+import AddressInput from '../inputs/addressInputs';
+import LayerHeader from './LayerHeader';
 
-const Signup = () => {
-  const [state, setState] = useState({
-    phone: '',
+const SignupForm = () => {
+  const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    dateOfBirth: { day: '', month: '', year: '' },
+    phone: '',
+    profilePicture: null,
+    day: '',
+    month: '',
+    year: '',
     gender: '',
     bloodGroup: '',
     address: '',
+    
     state: '',
     country: '',
-    pincode: ''
+    pincode: '',
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setState({ ...state, [name]: value });
+  const [previewUrl, setPreviewUrl] = useState(null);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === 'profilePicture') {
+      const file = files[0];
+      setFormData({ ...formData, [name]: file });
+      setPreviewUrl(URL.createObjectURL(file));
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
-  const handleDateChange = (e, type) => {
-    setState({
-      ...state,
-      dateOfBirth: { ...state.dateOfBirth, [type]: e.target.value }
+  const handlePhoneChange = (value) => {
+    setFormData({
+      ...formData,
+      phone: value,
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const dataToSubmit = new FormData();
+    
+    // Append the necessary fields
+    dataToSubmit.append('firstName', formData.firstName);
+    dataToSubmit.append('lastName', formData.lastName);
+    dataToSubmit.append('phone', formData.phone);
+    dataToSubmit.append('profilePicture', formData.profilePicture);
+    dataToSubmit.append('dateOfBirth', `${formData.day}-${formData.month}-${formData.year}`);
+    dataToSubmit.append('gender', formData.gender);
+    dataToSubmit.append('bloodGroup', formData.bloodGroup);
+    dataToSubmit.append('address', formData.address);
+    dataToSubmit.append('state', formData.state);
+    dataToSubmit.append('country', formData.country);
+    dataToSubmit.append('pincode', formData.pincode);
+  
+    dispatch(submitSignup(dataToSubmit));
+    
+    // Reset form logic here
+    setFormData({
+      firstName: '',
+      lastName: '',
+      phone: '',
+      profilePicture: null,
+      day: '',
+      month: '',
+      year: '',
+      gender: '',
+      bloodGroup: '',
+      address: '',
+      state: '',
+      country: '',
+      pincode: '',
+    });
+    setPreviewUrl(null);
+    navigate('/');
+  };
+  
+
   return (
-    <div className="bg-[#f3e8ea] flex flex-col items-center w-full">
-      <div className="bg-[#f3e8ea] w-full max-w-5xl p-8">
-        <div className="relative">
-          <div className="flex flex-col items-center mt-20">
-            <div className="flex flex-col items-center mb-8">
-              <div className="w-64 h-64 bg-white border-8 border-[#ffffff1a] shadow-md rounded-full mb-4"></div>
-              <div className="text-xl font-semibold text-[#902f2f]">Add a profile picture*</div>
-              <p className="text-sm font-semibold text-[#902f2f] opacity-50">You can change this later</p>
-            </div>
-            <div className="w-full max-w-xl grid grid-cols-1 gap-6">
-              <div className="flex flex-col">
-                <label className="text-xl font-semibold text-[#902f2f]">Name*</label>
-                <div className="flex space-x-4">
-                  <input type="text" name="firstName" placeholder="First name" className="input" onChange={handleInputChange} />
-                  <input type="text" name="lastName" placeholder="Last name" className="input" onChange={handleInputChange} />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xl font-semibold text-[#902f2f]">Phone*</label>
-                <PhoneInput
-                  country={'us'}
-                  value={state.phone}
-                  onChange={phone => setState({ ...state, phone })}
-                  inputClass="input"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xl font-semibold text-[#902f2f]">Date of Birth*</label>
-                <div className="flex space-x-4">
-                  <input type="text" placeholder="DD" className="input" onChange={(e) => handleDateChange(e, 'day')} />
-                  <input type="text" placeholder="MM" className="input" onChange={(e) => handleDateChange(e, 'month')} />
-                  <input type="text" placeholder="YYYY" className="input" onChange={(e) => handleDateChange(e, 'year')} />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xl font-semibold text-[#902f2f]">Gender*</label>
-                <select name="gender" className="input" onChange={handleInputChange}>
-                  <option value="">Select gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="preferNotToSay">Prefer not to say</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xl font-semibold text-[#902f2f]">Your Blood Group*</label>
-                <select name="bloodGroup" className="input" onChange={handleInputChange}>
-                  <option value="">Select blood group</option>
-                  <option value="O+">O+</option>
-                  <option value="O-">O-</option>
-                  <option value="A+">A+</option>
-                  <option value="A-">A-</option>
-                  <option value="B+">B+</option>
-                  <option value="B-">B-</option>
-                  <option value="AB+">AB+</option>
-                  <option value="AB-">AB-</option>
-                </select>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-xl font-semibold text-[#902f2f]">Address*</label>
-                <textarea name="address" placeholder="Permanent address" className="input h-24" onChange={handleInputChange}></textarea>
-              </div>
-              <div className="flex space-x-4">
-                <div className="flex flex-col w-1/3">
-                  <label className="text-xl font-semibold text-[#902f2f]">State*</label>
-                  <select name="state" className="input" onChange={handleInputChange}>
-                    <option value="">Select state</option>
-                    {/* Add state options here */}
-                  </select>
-                </div>
-                <div className="flex flex-col w-1/3">
-                  <label className="text-xl font-semibold text-[#902f2f]">Country*</label>
-                  <select name="country" className="input" onChange={handleInputChange}>
-                    <option value="">Select country</option>
-                    {/* Add country options here */}
-                  </select>
-                </div>
-                <div className="flex flex-col w-1/3">
-                  <label className="text-xl font-semibold text-[#902f2f]">Pincode*</label>
-                  <input type="text" name="pincode" placeholder="Pincode" className="input" onChange={handleInputChange} />
-                </div>
-              </div>
-            </div>
-            <button className="mt-8 px-12 py-3 bg-[#c1121f] text-white text-3xl font-semibold rounded-xl shadow-md">Register</button>
+    <div>
+      <LayerHeader link={"/"}/>
+    <div className="bg-bgPink  items-center justify-center flex flex-col ">
+     
+      <div className="bg-white rounded-lg p-8 shadow-md h-5/6 w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-4">Register Form</h2>
+        <form onSubmit={handleSubmit}>
+          <ProfilePictureUpload
+            formData={formData}
+            handleChange={handleChange}
+            previewUrl={previewUrl}
+          />
+          <label className="block mb-2">Name*</label>
+          <div className="mb-4">
+
+            <input
+              type="text"
+              name="firstName"
+              placeholder='First name'
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+              className=" px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder='Last name'
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+              className=" px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
           </div>
-          <div className="absolute top-0 left-0 w-full h-96 bg-cover" style={{ backgroundImage: `url(${subtract})` }}></div>
-          <div className="absolute top-20 right-10 text-[#c1121f] text-5xl font-bold">Bluud</div>
-          <Link to="/" className="absolute top-20 left-20">
-            <img src={arrow} alt="Back arrow" />
-          </Link>
-        </div>
+          <div className="mb-4">
+            <label className="block mb-2">Phone:</label>
+            <PhoneInput
+              country={'in'}
+              value={formData.phone}
+              onChange={handlePhoneChange}
+              inputClass="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              containerClass="w-full"
+            />
+          </div>
+          <DateOfBirthInput formData={formData} handleChange={handleChange} />
+          <GenderInput formData={formData} handleChange={handleChange} />
+          <BloodGroupInput formData={formData} handleChange={handleChange} />
+          <AddressInput formData={formData} handleChange={handleChange} />
+          <button
+            type="submit"
+            className="w-full px-4 py-2 bg-customBtn text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
+            Signup
+          </button>
+        </form>
       </div>
+    </div>
     </div>
   );
 };
 
-export default Signup;
+export default SignupForm;

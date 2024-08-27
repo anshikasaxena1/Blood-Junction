@@ -6,13 +6,15 @@ import Main from './MainContent'
 
 const Landing = () => {
   return (
-    <div className="w-auto min-h-screen flex flex-col">
+   
+    <div className="w-full min-h-screen flex flex-col bg-customWhite">
     <Header />
     <main className="flex-grow">
       <Main/>
     </main>
     <Footer />
   </div>
+ 
   )
 }
 

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-      <div className=" w-auto mt-52 pb-60 h-[500px] bg-rose-300 shadow border border-red-700/opacity-50" >
+    <div className="bg-customWhite">
+      <div className=" w-auto mt-52 pb-60 h-[500px] bg-rose-300 shadow border border-red-700/opacity-50 " >
         <div class="grid grid-cols-2 divide-x-[3px] divide-black divide-h-">
   <div> 
     <h1 className='text-contactText font-semibold text-4xl font-sans p-10 mt-4 tracking-wide'>Contact us</h1>
@@ -48,6 +49,7 @@ const Footer = () => {
   <span>Made By </span>
 </div>
 
+</div>
 </div>
   )
 }

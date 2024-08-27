@@ -9,11 +9,13 @@ module.exports = {
       },
       width: {
         '200px': '200px',
+        '108px':'108px',
 
       },
       height: {
         '200px': '200px',
         '801px': '801px',
+        '166px':'166px',
       },
       borderRadius: {
         'extra-large': '3rem',
@@ -21,6 +23,7 @@ module.exports = {
       spacing: {
         '100px': '100px',
         '100px': '100px',
+        
       },
       fontSize: {
         '18px': '18px',
@@ -30,6 +33,10 @@ module.exports = {
         'sans': ['Montserrat', 'sans-serif'],
       },
       colors: {
+        
+        shadowPink: "#bC0007",
+        bgPink: "#f3e8ea",
+        green: "#008000",
         contactText: "#4F000B",
         footerPink: "#FFAEBD",
         customMaroon: '#780000',
