@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Blood-Junction/static/css/main.13156996.css",
+    "main.js": "/Blood-Junction/static/js/main.391c180b.js",
+    "static/media/unsplash_279xIHymPYY.png": "/Blood-Junction/static/media/unsplash_279xIHymPYY.d45edd928d4385678197.png",
+    "static/media/unsplash_maYeMl3xCrY.png": "/Blood-Junction/static/media/unsplash_maYeMl3xCrY.0cf8666a86d49daa14c3.png",
+    "static/media/unsplash_R4VUajOucGM.png": "/Blood-Junction/static/media/unsplash_R4VUajOucGM.303b37305b226c2d9196.png",
+    "static/media/unsplash_j_g42ZMeyzs.png": "/Blood-Junction/static/media/unsplash_j_g42ZMeyzs.e23b2a84474c12b1edfd.png",
+    "static/media/drop.png": "/Blood-Junction/static/media/drop.9c0e420e2484caeb1890.png",
+    "static/media/random pic 1.png": "/Blood-Junction/static/media/random pic 1.83caa738a4b88ffe7aac.png",
+    "static/media/breastfeeding (1).png": "/Blood-Junction/static/media/breastfeeding (1).053bf9f9c7d7a9d09075.png",
+    "index.html": "/Blood-Junction/index.html",
+    "main.13156996.css.map": "/Blood-Junction/static/css/main.13156996.css.map",
+    "main.391c180b.js.map": "/Blood-Junction/static/js/main.391c180b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13156996.css",
+    "static/js/main.391c180b.js"
+  ]
+}
