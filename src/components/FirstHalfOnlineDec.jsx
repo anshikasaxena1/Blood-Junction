@@ -1,24 +1,43 @@
 import React from 'react'
-import blurDrop from "../assets/random pic 1.png"
-
 import PhoneInput from 'react-phone-input-2';
-const CampDetails = () => {
+import blurFeeding from "../assets/breastfeeding (1).png"
+const FirstHalfOnlineDec = () => {
   return (
     <div>
-        <div className='container  p-4 ' >
-    
-    <label className='mb-2 mt-8 text-customTextColor font-bold p-8'>Event Name*</label>
-    <div className='w-1/2 mx-8 '>
-    <input
-    type="text"
-    name="event name"
-    placeholder='Name your event in short like Simon’s Blood Drive'
-    required
-    className=" px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-    />
+        <div className='ml-10 right-0  w-2/3 '>
+        <h1 className='text-customMaroon mx-10  text-7xl font-bold  leading-snug tracking-normal text-shadow-md'>Online Declaration</h1>
+        <h1 className='text-customMaroon text-shadow-sm  mx-10 font-bold'>You have to fill this undertaking online to be able to donate anywhere and have a record in our system.</h1>
+        <div className='max-w-xl mx-auto p-8'>
+        <p className='font-medium text-customTextColor' >Emergency Contact Name*</p>
+      
+        <input type="text" className='rounded-md shadow-md' placeholder='First name '/>
+        <input type="text" className='rounded-md mx-5 shadow-md' placeholder='Last name'/>
+        </div>
+
+        <div className='container flex '>
+      <div className='w-1/2 px-8' >
+
+      <label className='text-customTextColor font-bold'>Phone*</label> 
+    <div className='w-1/2 mb-4'>
+    <PhoneInput
+              country={'in'}
+              
+              inputClass="w-full block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              
+            />
     </div>
-    
-    <div className='container flex gap-4 p-8'>
+    <label className='text-customTextColor font-bold mt-4'>Email*</label> 
+    <div className='w-1/2 mb-4'>
+    <input
+              type="email"
+              name="email"
+              placeholder='Your email address' 
+              required
+              className=" block w-full  px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              />
+    </div>
+
+    <div className='container flex gap-4 py-8 mb-4'>
       <div className='w-1/6 mr-4'>
       <label className=" mb-2 text-customTextColor font-bold">Date of Event*</label>
       <div className="flex space-x-2 ">
@@ -49,31 +68,21 @@ const CampDetails = () => {
         </div>
         </div>
         <div className='1/6 px-4'>
-        <label className='text-customTextColor font-bold  '>Time*</label>
+        <label className='text-customTextColor font-bold  '>Weight*</label>
         <div className="flex space-x-2 w-60 ">
         <input
-          type="time"
-          name="from"
-          placeholder="From"
-          maxLength="2"
+          type="Weight"
+          
+          placeholder="Your weight"
+          maxLength="3"
           required
           className="w-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
         />
-        <input
-         type="time"
-          name="to"
-          placeholder="To"
-          maxLength="2"
-          required
-          className="w-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-        />
+        
         </div>
         </div>
         </div>
         
-
-    <div className='container flex '>
-      <div className='w-1/2 p-8' >
    
       <label className='text-customTextColor font-bold mt-4'>Venue Address*</label>
       <div className='w-1/2'>
@@ -99,15 +108,7 @@ const CampDetails = () => {
               className=" block w-full  px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
     </div>
-    <label className='text-customTextColor font-bold'>Contact Number*</label> 
-    <div className='w-1/2'>
-    <PhoneInput
-              country={'in'}
-              
-              inputClass="w-full block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              
-            />
-    </div>
+    
     <label className='text-customTextColor font-bold'>Organiser's Email*</label> 
     <div className='w-1/2'>
     <input
@@ -137,13 +138,14 @@ const CampDetails = () => {
     <div className="flex-grow flex justify-end w-1/4">
       {/* Image container */}
       <div>
-        <img src={blurDrop} alt="drop" className="w-[490px] h-[500px] object-cover"/>
+        <img src={blurFeeding} alt="drop" className="w-[490px] h-[500px] object-cover"/>
       </div>
     </div>
     </div>
     </div>
     </div>
+   
   )
 }
 
-export default CampDetails
+export default FirstHalfOnlineDec

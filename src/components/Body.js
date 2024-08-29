@@ -14,6 +14,7 @@ import OrganiseCamp from './OrganiseCamp'
 import Thanks from './Thanks'
 import BloodCamps from './BloodCamps'
 import CampPage from './CampPage'
+import OnlineDecForm from './OnlineDecForm'
 
 const Body = () => {
 
@@ -23,7 +24,11 @@ const Body = () => {
             element: <Landing/>
         },
         {
-            path: "/campdetails",
+            path:"/onlinedeclarationform",
+            element: <OnlineDecForm/>
+        },
+        {
+            path: "/campPage/:name",
             element: <CampPage />,
         },
         {

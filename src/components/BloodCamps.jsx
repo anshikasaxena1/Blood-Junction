@@ -4,14 +4,13 @@ import Footer from './Footer.js';
 import Backbutton from './BackButton.js';
 import { useNavigate } from 'react-router-dom';
 
-
 const BloodCamps = () => {
   const bloodCamps = [
     { name: "Bluud Donation", location: "123, Street 5, Badli, Delhi, India", status: "Ongoing", date: "1 July 2024", time: "10 a.m - 5p.m", phone: "123-456-7890" },
     { name: "College Bluud Fest", location: "123, Street 5, Varansi, UP, India", status: "Ended", date: "20 June 2024", time: "10 a.m - 5p.m", phone: "987-654-3210" },
     { name: "Simon’s Blood Drive", location: "123, Street 5, Lucknow, UP, India", status: "Upcoming", date: "12 July 2024", time: "10 a.m - 5p.m", phone: "555-123-4567" },
     { name: "Bluud Donation", location: "123, Street 5, Badli, Delhi, India", status: "Ongoing", date: "1 July 2024", time: "10 a.m - 5p.m", phone: "123-456-7890" },
-    { name: "Bluud Dunation", location: "123, Street 5, Varansi, UP, India", status: "Ended", date: "20 June 2024", time: "10 a.m - 5p.m", phone: "987-654-3210" },
+    { name: "Bluud Donation", location: "123, Street 5, Varansi, UP, India", status: "Ended", date: "20 June 2024", time: "10 a.m - 5p.m", phone: "987-654-3210" },
     { name: "College Bluud Fest", location: "123, Street 5, Lucknow, UP, India", status: "Upcoming", date: "12 July 2024", time: "10 a.m - 5p.m", phone: "555-123-4567" },
     { name: "Bluud Donation", location: "123, Street 5, Badli, Delhi, India", status: "Ongoing", date: "1 July 2024", time: "10 a.m - 5p.m", phone: "123-456-7890" },
     { name: "Red Cross Blood Camp", location: "456, Park Avenue, Mumbai, Maharashtra, India", status: "Ongoing", date: "15 August 2024", time: "9 a.m - 4p.m", phone: "111-222-3333" },
@@ -54,10 +53,9 @@ const BloodCamps = () => {
   const loadMoreCamps = () => {
     setVisibleCamps(prevVisibleCamps => prevVisibleCamps + 10);
   };
-  //passing info for the camp details page 
   const navigate = useNavigate();
   const handleRowClick = (camp) => {
-    navigate(`/camp/${camp.name}`, { state: { camp } });
+    navigate(`/campPage/${camp.name}`, { state: { camp: { ...camp } } });
   };
 
   return (
@@ -133,7 +131,7 @@ const BloodCamps = () => {
             </thead>
             <tbody>
               {campsToDisplay.map((camp, index) => (
-                <tr key={index} onClick={() => handleRowClick(camp)}  className="my-2 bg-customWhite  border-2 border-customTextColor  rounded-md !important ">
+                <tr key={index} onClick={() => handleRowClick(camp)} className="my-2 bg-customWhite  border-2 border-customTextColor  rounded-md !important ">
                   <td className="px-4 py-2  text-customMaroon">{camp.name}</td>
                   <td className="px-4 py-2 text-customMaroon">{camp.location}</td>
                   <td className={`px-4 py-2 ${camp.status === 'Ongoing' ? 'text-lime-600' : camp.status === 'Ended' ? 'text-customRed' : 'text-gray-500'}`}>{camp.status}</td>
