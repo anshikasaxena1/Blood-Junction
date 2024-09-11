@@ -10,9 +10,9 @@ import Donorslide from './Donorslide'
 const Main = () => {
   
   return (
-    <div className='flex-grow  bg-customWhite p-4 min-h-screen'>
+    <div className='flex-grow  bg-customWhite p-2 min-h-screen'>
       <div className='w-full   mx-auto my-0'>
-      <div className='container  flex mx-auto mt-28'>
+      <div className='container  flex mx-auto mt-20'>
         <div className='w-3/4 p-6'>
         <span className='  w-3/4  text-customMaroon  text-7xl font-bold m-1 leading-snug tracking-normal text-shadow-sm'>Maintain a Healthy lifestyle, Donate Blood!</span>
         <span className='flex text-customTextColor font-semibold  font-18px text-2xl tracking-normal'>Did you know that people who donate blood are 88% less likely to suffer a heart attack and 33% <br/>less likely to acquire any type of cardiovascular disease. # When you donate blood, it removes 225 <br/>to 250 milligrams of iron from your body, hence reducing the
@@ -36,7 +36,7 @@ const Main = () => {
         <img src={drop} alt="Icon" className=" h-auto w-auto m-0 inline   absolute right-0 p-0" />
         </div>
         <div className='mt-14 '>
-        <span className='  w-3/4 text-customMaroon mx-24 text-8xl p-8 px-5 font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Eligibility Of Blood Donation</span>
+        <span className='  w-3/4 text-customMaroon  text-8xl p-8  font-bold  mt-16 leading-snug tracking-tight text-shadow-sm'>Eligibility Of Blood Donation</span>
         </div>
         <div className='container  flex  justify-center items-center p-12 '>
           <div className='mt-18 ml-20 '>

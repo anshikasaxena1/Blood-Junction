@@ -15,6 +15,7 @@ import Thanks from './Thanks'
 import BloodCamps from './BloodCamps'
 import CampPage from './CampPage'
 import OnlineDecForm from './OnlineDecForm'
+import NeedBlood from './NeedBlood'
 
 const Body = () => {
 
@@ -22,6 +23,10 @@ const Body = () => {
         {
             path:"/",
             element: <Landing/>
+        },
+        {
+            path:"/needblood",
+            element: <NeedBlood/>
         },
         {
             path:"/onlinedeclarationform",
