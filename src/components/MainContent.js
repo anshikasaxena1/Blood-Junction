@@ -20,7 +20,7 @@ const Main = () => {
         </span>
         <span className='flex text-customTextColor font-semibold  font-18px text-2xl tracking-normal mx-72'>Be a HERO.</span>
         <div className='container flex mx-auto my-16 mt-14'>
-        <Link to="">
+        <Link to="/needblood">
         <button className='border-2 border-none m-6 ml-10 px-20 py-3 rounded-xl shadow-md  bg-customBtn text-white font-semibold tracking-wide text-3xl'>
           Get Blood
         </button>
@@ -28,9 +28,11 @@ const Main = () => {
         <button className='border-2 border-none m-6 ml-2 px-4 py-3 rounded-full shadow-md bg-white text-customMaroon font-bold '>
           OR
         </button>
+        <Link to="/donate">
         <button className='border-2 border-none m-6 ml-10 px-20 py-3 rounded-xl shadow-md  bg-customBtn text-white font-semibold tracking-wide text-3xl'>
           Donate Blood
         </button>
+        </Link>
         </div>
         </div>
         <img src={drop} alt="Icon" className=" h-auto w-auto m-0 inline   absolute right-0 p-0" />

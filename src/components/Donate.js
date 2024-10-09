@@ -4,6 +4,7 @@ import Footer from './Footer.js'
 import { Icon } from "../assets/Icon.jsx"
 import { Link } from 'react-router-dom'
 
+
 const Donate = () => {
   return (
     <div className="w-full min-h-screen flex flex-col bg-customWhite">
@@ -57,10 +58,11 @@ const Donate = () => {
               </div>
               </div>
             </div>
-            
+            <Link to={"/Hospitals"}>
             <button className="bg-customBtn  text-white my-4 px-4 py-2 rounded-md shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 flex items-center justify-center w-full">
               Donate and save lives →
             </button>
+            </Link>
           </div>
         </div>
         <div className="border-t-2 border-dashed  border-customRed w-full h-1 py-5 mt-14"></div>

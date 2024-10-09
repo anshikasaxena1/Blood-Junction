@@ -16,6 +16,7 @@ import BloodCamps from './BloodCamps'
 import CampPage from './CampPage'
 import OnlineDecForm from './OnlineDecForm'
 import NeedBlood from './NeedBlood'
+import Hospitals from './Hospitals'
 
 const Body = () => {
 
@@ -23,6 +24,10 @@ const Body = () => {
         {
             path:"/",
             element: <Landing/>
+        },
+        {
+            path:"/hospitals",
+            element: <Hospitals/>
         },
         {
             path:"/needblood",
