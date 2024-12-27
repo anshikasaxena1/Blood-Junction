@@ -135,9 +135,7 @@ const CampDetails = () => {
 
       <div className="border-t-2 border-dashed border-customRed min-w-full h-1 py-5 mt-14"></div>
 
-      <div className="flex justify-center sm:justify-end">
-        <img src={blurDrop} alt="drop" className="w-full sm:w-[490px] h-[500px] object-cover" />
-      </div>
+      
     </div>
   );
 };
