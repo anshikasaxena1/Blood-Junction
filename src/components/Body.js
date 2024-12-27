@@ -2,11 +2,12 @@
 import React from 'react'
 import Landing from './Landing'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
+import BenefitsInfoPage from './BenefitsInfoPage'
 import Login from './Login'
 import Signup from './Signup'
 import UserProfile from './UserProfile'
 import Donate from './Donate'
+import MoreInfoElig from './MoreInfoElig'
 import HospitalLogin from './HospitalLogin'
 import DonationCampLogin from './DonationCampLogin'
 import EnterOTP from './EnterOTP'
@@ -24,6 +25,14 @@ const Body = () => {
         {
             path:"/",
             element: <Landing/>
+        },
+        {
+            path:"/eligibility",
+            element:<MoreInfoElig/>
+        },
+        {
+            path:"/benefits",
+            element:<BenefitsInfoPage/>
         },
         {
             path:"/hospitals",

@@ -3,6 +3,7 @@ import volunteer_activism from "../assets/volunteer_activism.png"
 import cardiology from "../assets/cardiology.png"
 import readiness_score from "../assets/readiness_score.png"
 import diversity from "../assets/diversity_1.png"
+import { Link } from 'react-router-dom'
 const Benefits = () => {
   return (
     <div className='mt-20'>
@@ -47,7 +48,11 @@ const Benefits = () => {
         
     </div>
     <div className='flex justify-center items-center mt-14'>
+      <Link 
+      to="/benefits"
+      >
     <button className=' border-2 border-none  px-12 py-3 rounded-xl shadow-md  bg-customBtn text-white font-semibold tracking-wide text-3xl' >Read more</button>
+    </Link>
     </div>
     </div>
     

@@ -1,57 +1,107 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <div className="bg-customWhite">
-      <div className=" w-auto mt-52 pb-60 h-[500px] bg-rose-300 shadow border border-red-700/opacity-50 " >
-        <div class="grid grid-cols-2 divide-x-[3px] divide-black divide-h-">
-  <div> 
-    <h1 className='text-contactText font-semibold text-4xl font-sans p-10 mt-4 tracking-wide'>Contact us</h1>
-    <form className='mx-10 '>
-      <p>Name*</p>
-      
-      <input type="text" className='rounded-2xl' placeholder='First name '/>
-      <input type="text" className='rounded-2xl mx-5' placeholder='Last name'/>
-      <p>Email*</p>
-      <input type="email" className='block rounded-2xl ' placeholder='Your email address' />
-      Query*
-      <textarea type="text" className='block rounded-2xl' placeholder='Questions you have!' rows={4}
-        cols={40}/>
-        <div className='flex justify-center mt-5' >
-      <button className=' text-white text-xl py-2 px-20 bg-red-950 block rounded-2xl tracking-wide font-semibold  '>Continue</button>
+      <div className="w-full mt-20 pb-20 bg-rose-300 shadow border border-red-700/50">
+        {/* Grid for Contact Form and Links */}
+        <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x-[3px] divide-black px-6 md:px-12 py-10">
+          {/* Contact Form */}
+          <div>
+            <h1 className="text-contactText font-semibold text-2xl md:text-4xl font-sans pb-6 tracking-wide">
+              Contact Us
+            </h1>
+            <form className="space-y-4">
+              <div>
+                <p className="font-medium text-lg">Name*</p>
+                <div className="flex flex-col md:flex-row gap-4">
+                  <input
+                    type="text"
+                    className="rounded-2xl w-full md:w-1/2 px-4 py-2 border"
+                    placeholder="First name"
+                  />
+                  <input
+                    type="text"
+                    className="rounded-2xl w-full md:w-1/2 px-4 py-2 border"
+                    placeholder="Last name"
+                  />
+                </div>
+              </div>
+              <div>
+                <p className="font-medium text-lg">Email*</p>
+                <input
+                  type="email"
+                  className="rounded-2xl w-full px-4 py-2 border"
+                  placeholder="Your email address"
+                />
+              </div>
+              <div>
+                <p className="font-medium text-lg">Query*</p>
+                <textarea
+                  className="rounded-2xl w-full px-4 py-2 border"
+                  placeholder="Questions you have!"
+                  rows={4}
+                />
+              </div>
+              <div className="flex justify-center">
+                <button className="text-white text-xl py-2 px-10 bg-red-950 rounded-2xl tracking-wide font-semibold hover:bg-red-800">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* Sitemap and More Links */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:mt-0">
+            {/* Sitemap */}
+            <div>
+              <h1 className="text-contactText font-semibold text-xl font-sans pb-4 tracking-wide">
+                Sitemap
+              </h1>
+              <ul className="text-customTextColor space-y-3">
+                <li>
+                  <Link to="/" className="hover:underline">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:underline">
+                    Donate
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:underline">
+                    Need Blood
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/" className="hover:underline">
+                    Organise Camp
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* More Links */}
+            <div>
+              <h1 className="text-contactText font-semibold text-xl font-sans pb-4 tracking-wide">
+                More
+              </h1>
+              <ul className="text-customTextColor space-y-3">
+                <li>Careers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Bottom Section */}
+        <div className="flex justify-center md:justify-end items-center px-6 py-4">
+          <span className="text-customTextColor">Made By</span>
+        </div>
       </div>
-    </form>
-  </div>
-  <div className='grid grid-cols-2 gap-4'>
-    <div>
-      <h1 className='text-contactText font-semibold text-xl font-sans p-10 mt-24 tracking-wide' >Sitemap</h1>
-      <ul className='px-11 text-customTextColor space-y-4'>
-        <li><Link to="/"   >Home</Link></li>
-        <li><Link to="/"   >Donate</Link></li>
-        <li><Link to="/"   >Need Blood</Link></li>
-        <li><Link to="/"   >Organise Camp</Link></li>
-      </ul>
     </div>
-    <div>
-      <h1 className='text-contactText font-semibold text-xl font-sans  pt-10 mt-24 tracking-wide'>More</h1>
-      <ul className=' text-customTextColor space-y-4 mt-10'>
-        <li>Careers</li>
-      </ul>
+  );
+};
 
-      
-
-    </div>
-  </div>
-  
-</div>
-<div className='flex justify-end'>
-  <span>Made By </span>
-</div>
-
-</div>
-</div>
-  )
-}
-
-export default Footer
+export default Footer;
